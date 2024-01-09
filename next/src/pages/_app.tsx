@@ -3,7 +3,9 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 import { AppProps } from 'next/app'
 
+import Header from '@/components/Header'
 import createEmotionCache from '@/styles/createEmotionCache'
+import '@/styles/destyle.css'
 import theme from '@/styles/theme'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -20,6 +22,7 @@ export default function MyApp(props: MyAppProps): JSX.Element {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
